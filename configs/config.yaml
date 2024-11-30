@@ -17,7 +17,7 @@ classifier:
   pretrained: False
 
 training:
-  data_dir: 'D:\Working\Project\FlowerDetect(no data)\data\train\Augmented_dataset'  # 替换为你的数据集路径
+  data_dir: 'D:\Working\Project\FlowerDetect(no data)\data\train_data\FlowerNet\Augmented_dataset'  # 替换为你的数据集路径
   temp_dir: 'D:\Working\Project\FlowerDetect(no data)\data\temp'
   batch_size: 64
   num_epochs: 5
