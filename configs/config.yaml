@@ -1,0 +1,31 @@
+# config.yaml
+
+mode: 'train'  # 可选 'train' 或 'predict'
+
+
+detector:
+  model_name: 'yolov10n'
+  pretrained: True
+  model_path: 'D:\Working\Project\FlowerDetect(no data)\models\yolov10\yolov10n.pt'  # 替换为你的预训练模型路径
+  expected_type_id: '80'  # 可选,对应关系见coco.yaml
+
+classifier:
+  model_name: 'resnet18'
+  model_path: 'D:\Working\Project\FlowerDetect(no data)\models\resnet18\resnet18.pt'  # 替换为你的预训练模型路径
+  save_path: 'D:\Working\Project\FlowerDetect(no data)\models\resnet18\resnet18.pt'  # 替换为你的模型保存路径
+  num_classes: 3
+  pretrained: False
+
+training:
+  data_dir: 'D:\Working\Project\FlowerDetect(no data)\data\train\Augmented_dataset'  # 替换为你的数据集路径
+  temp_dir: 'D:\Working\Project\FlowerDetect(no data)\data\temp'
+  batch_size: 64
+  num_epochs: 5
+  learning_rate: 0.001
+  momentum: 0.9
+  device: 'cuda'  # 可选 'cpu' 或 'cuda'
+
+prediction:
+  predict_dir: 'path/to/predict/images'  # 替换为你的预测图像目录
+  output_dir: 'path/to/save/results'     # 替换为你的输出结果目录
+  device: 'cuda'  # 可选 'cpu' 或 'cuda'
